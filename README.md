@@ -1,46 +1,133 @@
-# Getting Started with Create React App
+# Computer Architecture Visualization Tool
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An interactive educational tool that demonstrates computer architecture concepts through two main modules: Memory Hierarchy and CPU Pipeline.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+This project provides visual simulations of key computer architecture concepts to help students understand:
+1. How data flows between different levels of memory hierarchy
+2. How instructions are processed through a CPU pipeline
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Memory Hierarchy Module
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Memory Hierarchy Visualization**: Interactive visualization showing data flow between memory levels
+- **Data Flow Simulation**: Simulate different memory access patterns with customizable scenarios
+- **Memory Components State**: Real-time view of data contents in each memory layer (Registers, Cache, RAM, Disk)
+- **Memory Performance**: Display of access times for different memory components
+- **Memory Hierarchy Relationships**: Interactive diagram showing how components interact during memory operations
+- **Memory Concepts**: Educational content explaining key memory hierarchy concepts with quizzes
 
-### `npm test`
+### CPU Pipeline Module
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **5-Stage Pipeline Visualization**: Visual representation of the classic 5-stage RISC pipeline (IF, ID, EX, MEM, WB)
+- **Pipeline Control Panel**: Controls for executing instructions through the pipeline
+- **Pipeline Information Panel**: Detailed information about pipeline execution and hazards
+- **Hazard Detection**: Visualization of data, control, and structural hazards
+- **Performance Statistics**: Real-time metrics on pipeline performance
 
-### `npm run build`
+## Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React with TypeScript
+- Framer Motion for animations
+- Zustand for state management
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+- Node.js (v14+)
+- npm or yarn
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Installation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository
+   ```bash
+   git clone https://github.com/yourusername/computer-architecture-visualization.git
+   cd computer-architecture-visualization
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. Install dependencies
+   ```bash
+   npm install
+   ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+3. Start the development server
+   ```bash
+   npm start
+   ```
 
-## Learn More
+4. Open your browser and navigate to `http://localhost:3000`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Usage Guide
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Memory Hierarchy Tab
+
+1. **Select a Simulation**: Choose from predefined simulation scenarios
+2. **Start Simulation**: Click the Start button to begin the visualization
+3. **Watch Data Flow**: Observe how data moves between memory components
+4. **View Component States**: See the current data contents in each memory layer
+5. **Explore Memory Operations**: Click on operations in the Memory Interconnections section to see different data paths
+6. **Learn Concepts**: Study the educational content in the Memory Concepts section
+
+### CPU Pipeline Tab
+
+1. **Add Instructions**: Use the control panel to add instructions to the pipeline
+2. **Execute Pipeline**: Step through execution cycles or run continuously
+3. **Observe Hazards**: Watch for pipeline hazards (data, control, structural)
+4. **View Performance**: Monitor statistics about pipeline efficiency
+5. **Analyze Behavior**: Study how different instructions interact in the pipeline
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── memory/             # Memory hierarchy components
+│   │   ├── MemoryHierarchy.tsx
+│   │   ├── EnhancedControlPanel.tsx
+│   │   ├── EnhancedHardwareComponents.tsx
+│   │   ├── MemoryMetrics.tsx
+│   │   ├── MemoryInterconnections.tsx
+│   │   ├── MemoryEducation.tsx
+│   │   └── MemoryComponents.css
+│   └── visualization/      # Pipeline visualization components
+│       ├── PipelineVisualization.tsx
+│       ├── PipelineControlPanel.tsx
+│       ├── PipelineInfoPanel.tsx
+│       └── DataFlow.tsx
+├── store/                  # State management
+│   ├── dataFlowStore.ts    # Memory hierarchy state
+│   └── pipelineStore.ts    # Pipeline state
+├── utils/                  # Utility functions
+│   └── simulationUtils.ts
+└── App.tsx                 # Main application with tab navigation
+```
+
+## Educational Context
+
+This visualization tool aims to help students and educators understand:
+
+### Memory Hierarchy Concepts
+- Memory hierarchy organization and characteristics
+- Cache hit and miss scenarios
+- Page faults and virtual memory
+- Write-back and write-through policies
+- Memory access time differences across components
+
+### CPU Pipeline Concepts
+- Instruction pipelining fundamentals
+- Pipeline stages and their functions
+- Pipeline hazards and their resolution
+- Performance implications of pipelining
+- Advanced concepts like data forwarding and branch prediction
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgements
+
+- Developed as a Computer Architecture and Organization project
+- Inspired by the need for interactive educational tools in computer science education
