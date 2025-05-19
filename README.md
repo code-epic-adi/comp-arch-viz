@@ -123,10 +123,6 @@ This visualization tool aims to help students and educators understand:
 - Performance implications of pipelining
 - Advanced concepts like data forwarding and branch prediction
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## Acknowledgements
 
 - Developed as a Computer Architecture and Organization project
